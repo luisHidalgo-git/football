@@ -26,6 +26,10 @@ body {
     flex-direction: column;
 }
 
+a {
+    color: white;
+}
+
 .navbar {
     background-color: var(--card-bg);
     padding: 1rem;
@@ -155,13 +159,13 @@ h1 {
 .info-section {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem;
+    gap: 1.5rem;
+    padding: 1.5rem;
 }
 
 .info-section img {
-    width: 48px;
-    height: 48px;
+    width: 250px;
+    height: 250px;
     object-fit: contain;
 }
 
@@ -194,5 +198,10 @@ h1 {
     .match-card,
     .result-card {
         padding: 1rem;
+    }
+
+    .info-section img {
+        width: 80px;
+        height: 80px;
     }
 }
