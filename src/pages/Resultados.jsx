@@ -1,4 +1,8 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 function Resultados() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const results = [
     {
       status: "Finalizado",
@@ -61,10 +65,33 @@ function Resultados() {
   return (
     <div className="page-container">
       <h1>
-        <button className="icon-button">☰</button>
+        <button
+          className="icon-button"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          ☰
+        </button>
         <span className="page-title">Resultados</span>
         <button className="icon-button">🔔</button>
       </h1>
+      {isMenuOpen && (
+        <div className="menu active">
+          <div className="menu-items">
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              Horarios
+            </Link>
+            <Link to="/resultados" onClick={() => setIsMenuOpen(false)}>
+              Resultados
+            </Link>
+            <Link to="/info" onClick={() => setIsMenuOpen(false)}>
+              Información
+            </Link>
+            <Link to="/boletos" onClick={() => setIsMenuOpen(false)}>
+              Boletos
+            </Link>
+          </div>
+        </div>
+      )}
       <div className="results-grid">
         {results.map((result, index) => (
           <div
