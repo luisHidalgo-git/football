@@ -1,7 +1,10 @@
 function Boletos() {
     return (
         <div className="page-container">
-            <h1>Asientos Disponibles</h1>
+            <h1>
+                Asientos Disponibles
+                <span>🔔</span>
+            </h1>
             <div className="stadium-map">
                 <img
                     src="/src/images/estadio.png"
