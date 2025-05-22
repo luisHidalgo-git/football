@@ -210,6 +210,37 @@ h1 {
   border-radius: 8px;
 }
 
+@media (max-width: 1024px) {
+  .matches-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .match-card {
+    padding: 1.25rem;
+  }
+
+  .team img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .info-content {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .info-section img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     background-color: var(--primary-bg);
