@@ -61,8 +61,9 @@ function Horarios() {
     return (
         <div className="page-container">
             <h1>
-                Horarios
-                <span>🔔</span>
+                <button className="icon-button">☰</button>
+                <span className="page-title">Horarios</span>
+                <button className="icon-button">🔔</button>
             </h1>
             <div className="matches-grid">
                 {matches.map((match, index) => (
