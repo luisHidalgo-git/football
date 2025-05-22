@@ -16,7 +16,7 @@ function Info() {
 
                 <div className="info-section">
                     <img
-                        src="/src/images/ubicacion.png"
+                        src="/src/images/contacto.png"
                         alt="Contacto"
                     />
                     <div className="info-text">
@@ -28,7 +28,7 @@ function Info() {
 
                 <div className="info-section">
                     <img
-                        src="/src/images/ubicacion.png"
+                        src="/src/images/web.png"
                         alt="Web"
                     />
                     <div className="info-text">
@@ -45,7 +45,7 @@ function Info() {
 
                 <div className="info-section">
                     <img
-                        src="/src/images/ubicacion.png"
+                        src="/src/images/facebook.png"
                         alt="Social"
                     />
                     <div className="info-text">
