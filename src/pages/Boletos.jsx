@@ -4,7 +4,7 @@ function Boletos() {
             <h1>Asientos Disponibles</h1>
             <div className="stadium-map">
                 <img
-                    src="/stadium-map.png"
+                    src="/src/images/estadio.png"
                     alt="Mapa del estadio"
                     className="stadium-image"
                 />

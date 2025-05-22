@@ -2,13 +2,36 @@ function Horarios() {
     const matches = [
         {
             date: '27 Aug 2025',
-            time: '09:30',
-            team1: 'West-Ham',
+            time: '17:45',
+            team1: 'West Ham',
             team2: 'Spurs',
-            team1Logo: '/teams/west-ham.png',
-            team2Logo: '/teams/spurs.png',
+            team1Logo: '/src/images/avfc.png',
+            team2Logo: '/src/images/tottenham.png',
         },
-        // Add more matches here
+        {
+            date: '30 Aug 2025',
+            time: '21:30',
+            team1: 'Chelsea',
+            team2: 'Leicester',
+            team1Logo: '/src/images/chelsea.png',
+            team2Logo: '/src/images/liverpool.png',
+        },
+        {
+            date: '27 Aug 2025',
+            time: '16:00',
+            team1: 'Man City',
+            team2: 'Leeds',
+            team1Logo: '/src/images/mancity.png',
+            team2Logo: '/src/images/arsenal.png',
+        },
+        {
+            date: '30 Aug 2025',
+            time: '15:30',
+            team1: 'Southampton',
+            team2: 'Everton',
+            team1Logo: '/src/images/newcastle.png',
+            team2Logo: '/src/images/everton.png',
+        },
     ];
 
     return (

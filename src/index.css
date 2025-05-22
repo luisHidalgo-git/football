@@ -1,8 +1,11 @@
 :root {
-    --primary-bg: #242424;
-    --card-bg: #1a1a1a;
-    --text-primary: rgba(255, 255, 255, 0.87);
-    --accent-color: #646cff;
+    --primary-bg: #1a1b26;
+    --card-bg: #1f2937;
+    --text-primary: #ffffff;
+    --accent-color: #3b82f6;
+    --gradient-blue: linear-gradient(135deg, #60a5fa, #3b82f6);
+    --gradient-red: linear-gradient(135deg, #ef4444, #dc2626);
+    --gradient-yellow: linear-gradient(135deg, #fbbf24, #d97706);
 }
 
 * {
@@ -29,13 +32,15 @@ body {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .navbar a {
     color: var(--text-primary);
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: 8px;
+    font-weight: 500;
 }
 
 .navbar a:hover {
@@ -51,34 +56,36 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 2rem;
+    font-size: 2rem;
 }
 
-.matches-grid,
-.results-grid {
+.matches-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
-.match-card,
-.result-card {
+.match-card {
     background-color: var(--card-bg);
-    padding: 1rem;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
     gap: 1rem;
 }
 
 .team {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
+    text-align: center;
 }
 
 .team img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 
@@ -86,27 +93,106 @@ h1 {
     text-align: center;
 }
 
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.result-card {
+    background: var(--gradient-blue);
+    padding: 1.5rem;
+    border-radius: 12px;
+    color: white;
+}
+
+.status {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.match-result {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.team-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.team-result img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.score {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.scorers {
+    font-size: 0.875rem;
+    text-align: center;
+}
+
 .info-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+}
+
+.info-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.info-section img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .stadium-map {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 12px;
 }
 
 .stadium-image {
     width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --primary-bg: #ffffff;
-        --card-bg: #f9f9f9;
-        --text-primary: #213547;
+@media (max-width: 768px) {
+    .info-content {
+        grid-template-columns: 1fr;
+    }
+
+    .match-card,
+    .result-card {
+        padding: 1rem;
     }
 }
