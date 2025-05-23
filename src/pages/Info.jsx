@@ -18,6 +18,9 @@ function Info() {
       </h1>
       {isMenuOpen && (
         <div className="menu active">
+          <button className="close-menu" onClick={() => setIsMenuOpen(false)}>
+            ✕
+          </button>
           <div className="menu-items">
             <Link to="/" onClick={() => setIsMenuOpen(false)}>
               Horarios
