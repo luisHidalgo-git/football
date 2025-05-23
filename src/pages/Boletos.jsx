@@ -4,6 +4,15 @@ import { Link } from "react-router-dom";
 function Boletos() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const availableSeats = [
+    { section: "233", row: "9", type: "Verified VIP Ticket" },
+    { section: "348", row: "16", type: "Verified VIP Ticket" },
+    { section: "118", row: "3", type: "Verified VIP Ticket" },
+    { section: "319", row: "6", type: "Verified VIP Ticket" },
+    { section: "101", row: "5", type: "Verified VIP Ticket" },
+    { section: "149", row: "11", type: "Verified VIP Ticket" },
+  ];
+
   return (
     <div className="page-container">
       <h1>
@@ -40,6 +49,21 @@ function Boletos() {
           alt="Mapa del estadio"
           className="stadium-image"
         />
+      </div>
+      <div className="seats-grid">
+        {availableSeats.map((seat, index) => (
+          <div key={index} className="seat-card">
+            <div className="seat-info">
+              <div className="seat-section">
+                <span>
+                  Sec {seat.section} • Row {seat.row}
+                </span>
+                <span className="seat-type">{seat.type}</span>
+              </div>
+              <button className="reserve-button">Reservar</button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

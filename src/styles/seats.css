@@ -1,0 +1,94 @@
+.seats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.seat-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.seat-card:hover {
+  transform: translateY(-2px);
+}
+
+.seat-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seat-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.seat-type {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+
+.reserve-button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.reserve-button:hover {
+  background-color: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .seats-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .seat-card {
+    padding: 0.75rem;
+  }
+
+  .seat-type {
+    font-size: 0.75rem;
+  }
+
+  .reserve-button {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .seats-grid {
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .seat-card {
+    padding: 0.5rem;
+  }
+
+  .seat-section {
+    font-size: 0.75rem;
+  }
+
+  .seat-type {
+    font-size: 0.675rem;
+  }
+
+  .reserve-button {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
